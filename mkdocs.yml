@@ -5,6 +5,12 @@ repo_url: https://github.com/genshin-impart/
 copyright: Copyright © 2023 三天摸鱼两天晒网 HUST
 nav:
   - 主页: index.md
+  - 指南:
+      - 开发: dev/summarize.md
+      - 用户: user/guide.md
+  - 关于:
+      - 团队: about/team.md
+      - 版本: about/release.md
 theme:
   name: material
   language: "zh"

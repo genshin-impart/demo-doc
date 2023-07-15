@@ -1,17 +1,46 @@
-# Welcome to MkDocs
+# 欢迎使用模型可视化平台
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## 项目说明
 
-## Commands
+1. 算法部分：基于 [PaddlePaddle](https://www.paddlepaddle.org.cn/) 深度学习框架和龙源风电官方提供的数据，设计一种利用当日 05:00 之前的数据，预测次日 00:00 至 23:45 实际功率的方法。
+2. 软件部分：基于 Web 的风电功率预测系统，其中包括数据可视化、实时更新、滚动预测和响应式设计四大基础功能。在模型训练和预测过程中，可以实时查看训练进度和相关日志输出，把握模型的状态。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## 用户指南
 
-## Project layout
+请查阅[用户手册](./user/guide.md)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## 开发指南
+
+请查阅[开发手册](./dev/summarize.md)
+
+### 技术选型
+
+- 前端
+
+主要技术栈为 React 框架……
+
+```
+
+```
+
+- 后端
+
+主要技术栈为 Flask 框架……
+
+```
+
+```
+
+- 模型
+
+主要技术栈为 PaddlePaddle 深度学习框架和 Scikit-learn 机器学习工具库……
+
+```
+
+```
+
+### 项目结构
+
+```
+
+```
