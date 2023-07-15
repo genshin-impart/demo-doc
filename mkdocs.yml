@@ -1,0 +1,51 @@
+site_name: 模型可视化平台使用指南
+site_description: 三天摸鱼两天晒网的区域赛作品文档
+site_url: https://baidu.com/
+repo_url: https://github.com/genshin-impart/
+copyright: Copyright © 2023 三天摸鱼两天晒网 HUST
+nav:
+  - 主页: index.md
+theme:
+  name: material
+  language: "zh"
+  palette: # 白天/夜间模式切换
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        # icon: material/toggle-switch-off-outline
+        icon: material/weather-night
+        name: 暗色
+    - scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        # icon: material/toggle-switch
+        icon: material/weather-sunny
+        name: 亮色
+  features:
+    - header.autohide
+plugins:
+  - search
+  - glightbox
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: true
+      use_pygments: true
+  - md_in_html
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # Formatting 标记
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
