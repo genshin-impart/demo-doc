@@ -8,8 +8,7 @@
 
 ```shell
 python3 -m venv ./venv
-cd venv
-source ./bin/activate
+source venv/bin/activate
 ```
 
 ## Requirements for mkdocs
@@ -18,7 +17,9 @@ source ./bin/activate
 pip install mkdocs mkdocstrings mkdocs-material mkdocs-glightbox
 ```
 
-## Local preview
+## Preview and deployment
+
+### Preview local
 
 在项目根目录下执行如下命令：
 
@@ -27,3 +28,14 @@ mkdocs serve
 ```
 
 即可预览当前文档。
+
+### Deploy online
+
+在项目根目录下执行如下命令：
+
+```shell
+mkdocs build
+mkdocs gh-deploy
+```
+
+即可将 `docs` 目录下的 markdown 文档转换为网页代码并存放在 `site` 目录下，部署到 `gh-deploy` 分支下的 github pages 中。
