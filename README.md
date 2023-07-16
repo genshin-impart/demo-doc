@@ -1,5 +1,7 @@
 # mkdocs 文档
 
+在线部署 URL: https://genshin-impart.github.io/demo-doc/
+
 ## Python venv configuration
 
 使用 Python 自带的 venv 虚拟环境。
