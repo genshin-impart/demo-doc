@@ -8,7 +8,20 @@
 
 ```shell
 python3 -m venv ./venv
+```
+
+激活虚拟环境
+
+- Linux
+
+```shell
 source venv/bin/activate
+```
+
+- Windows
+
+```shell
+.\venv\Scripts\Activate.ps1
 ```
 
 ## Requirements for mkdocs
@@ -31,11 +44,18 @@ mkdocs serve
 
 ### Deploy online
 
-在项目根目录下执行如下命令：
+在项目根目录下执行如下命令（非必须）：
 
 ```shell
 mkdocs build
+```
+
+即可将 `docs` 目录下的 markdown 文档转换为网页代码并存放在 `site` 目录下。
+
+执行命令
+
+```shell
 mkdocs gh-deploy
 ```
 
-即可将 `docs` 目录下的 markdown 文档转换为网页代码并存放在 `site` 目录下，部署到 `gh-deploy` 分支下的 github pages 中。
+即可将网页发布到 `gh-deploy` 分支下的 github pages 中。
