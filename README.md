@@ -21,7 +21,7 @@ source venv/bin/activate
 - Windows
 
 ```shell
-.\venv\Scripts\Activate.ps1
+.\venv\Scripts\activate
 ```
 
 ## Requirements for mkdocs
