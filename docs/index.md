@@ -15,15 +15,21 @@
 
 ### 技术选型
 
-- 前端
+#### 前端
 
-主要技术栈为 React 框架……
+主要技术栈为 [React](https://react.dev) 框架。
 
-```
+React是由Facebook开发的用于构建用户界面的JavaScript库。它采用组件化的方式构建UI，使开发者可以将复杂的用户界面拆分成独立的可复用组件。React使用虚拟DOM（Virtual DOM）来优化性能，将组件更改和DOM更新最小化，从而提高应用程序的性能和响应速度。
 
-```
+前端项目采用工程化管理，并尽可能使用现代化的工具链。
 
-- 后端
+- 包管理器：使用 pnpm 替代 npm 进行依赖管理
+- 开发工具：使用 Vite 以提供更快的 HMR
+- 构建工具：使用 Vite 内建的 ESBuild + SWC 进行 TypeScript 编译和生成目标代码
+- 项目管理：使用 lint-staged 和 commit-lint 规范代码提交
+- 项目样式：在 Joy UI 和 emotion 引擎的基础上构建了自定义组件
+
+#### 后端
 
 主要技术栈为 [Flask](https://flask.palletsprojects.com/en/2.3.x/) 框架。
 
@@ -39,7 +45,7 @@ Flask 支持 RESTful 风格的 API 开发，可用于构建 REST API。其文档
 
 ```
 
-- 模型
+#### 模型
 
 主要技术栈为 PaddlePaddle 深度学习框架和 Scikit-learn 机器学习工具库。
 
