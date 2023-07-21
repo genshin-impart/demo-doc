@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://baidu.com/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <loc>https://genshin-impart.github.io/demo-doc/</loc>
+         <lastmod>2023-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://baidu.com/about/release/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <loc>https://genshin-impart.github.io/demo-doc/about/release/</loc>
+         <lastmod>2023-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://baidu.com/about/team/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <loc>https://genshin-impart.github.io/demo-doc/about/team/</loc>
+         <lastmod>2023-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://baidu.com/dev/summarize/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <loc>https://genshin-impart.github.io/demo-doc/dev/summarize/</loc>
+         <lastmod>2023-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://baidu.com/user/guide/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <loc>https://genshin-impart.github.io/demo-doc/user/guide/</loc>
+         <lastmod>2023-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://baidu.com/dev/summarize/">
+        <link rel="canonical" href="https://genshin-impart.github.io/demo-doc/dev/summarize/">
       
       
         <link rel="prev" href="../..">
@@ -45,6 +45,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -310,9 +312,134 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         开发
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    软件设计
+  </a>
+  
+    <nav class="md-nav" aria-label="软件设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    前端设计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    后端设计
+  </a>
+  
+    <nav class="md-nav" aria-label="后端设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    框架选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    数据库设计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    算法设计
+  </a>
+  
+    <nav class="md-nav" aria-label="算法设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    流程概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    数据处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    模型设计
+  </a>
+  
+    <nav class="md-nav" aria-label="模型设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    模型选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    具体实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -422,6 +549,115 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    软件设计
+  </a>
+  
+    <nav class="md-nav" aria-label="软件设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    前端设计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    后端设计
+  </a>
+  
+    <nav class="md-nav" aria-label="后端设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    框架选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    数据库设计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    算法设计
+  </a>
+  
+    <nav class="md-nav" aria-label="算法设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    流程概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    数据处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    模型设计
+  </a>
+  
+    <nav class="md-nav" aria-label="模型设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    模型选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    具体实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -439,6 +675,49 @@
 
 
 <h1 id="_1">开发手册<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<p>这部分将详细介绍本软件使用的开源工具和项目架构。</p>
+<h2 id="_2">软件设计<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="_3">前端设计<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<h3 id="_4">后端设计<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<h4 id="_5">框架选择<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
+<p>Flask 是使用 Python 编写的 Web 微框架，核心简单易于扩展。Flask 有两个主要依赖，一个是 WSGI（Web Server Gateway Interface，Web 服务器网关接口）工具集——<a href="https://werkzeug.palletsprojects.com/en/2.3.x/">Werkzeug</a>，另一个是 Jinja2 模板引擎。软件采用前后端分离的架构，因此仅使用了前者的部分功能。</p>
+<h4 id="_6">数据库设计<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
+<p>为了便于开发和测试，软件选用 SQLite 作为数据库管理系统（DBMS，Database Managerment System）。考虑到在 Web 应用里使用原生 SQL 语句操作数据库存在如下问题：</p>
+<ol>
+<li>手动编写 SQL 语句比较繁琐，且视图函数中引入过多 SQL 语句会降低代码可读性。此外还容易出现安全问题，如 SQL 注入。</li>
+<li>常见的开发模式是在开发时使用简单的 SQLite，而在部署时切换到 MySQL 等更健壮的 DBMS。但是对于不同的 DBMS，我们需要使用不同的 Python 接口库，这让 DBMS 的切换变得不太容易。</li>
+</ol>
+<p>使用 ORM 可以很大程度上解决这些问题。它会自动帮助你处理查询参数的转义，尽可能地避免 SQL 注入的发生。另外，它为不同的 DBMS 提供统一的接口，让切换工作变得非常简单。ORM 扮演翻译的角色，能够将 Python 语言转换为 SQL 指令，方便开发者使用 Python 来操控数据库。项目中为此引入了 Flask-SQLalchemy 扩展，简化连接数据库服务器、管理数据库操作会话等各类工作，让 Flask 中的数据处理体验变得更加轻松。</p>
+<p>数据库表项主要设计了两个对象：<strong>用户 User</strong> 和<strong>模型 PaddleModel</strong>。为保持简洁，没有过多设计二者之间的关联。</p>
+<h2 id="_7">算法设计<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<h3 id="_8">流程概述<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<p>算法设计简要流程图如下：</p>
+<p><a class="glightbox" href="../../images/summarize/1689950862666.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="流程图" src="../../images/summarize/1689950862666.png" /></a></p>
+<h3 id="_9">数据处理<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<ul>
+<li>数据剪裁：传入 dataframe 后，进行去重/去头/去中/去尾等剪裁操作，使其变为窗口的整数倍，且更加符合模型特征规律。</li>
+<li>
+<p>非线性自定义拟合：选取“在合理范围内”的预测风速——预测功率数据对，利用 curve_fit 构建自定义函数
+  $\frac{L}{1 + e^{-k * (x - x_0)} + b}$ 进行拟合，得到风速——功率修正 S 型曲线，后续将对曲线进行修正。</p>
+</li>
+<li>
+<p>线性拟合：选取“在合理范围内”的 <code>PREPOWER</code>——<code>YD15</code> 数据对，利用最小二乘法得到 <code>PREPOWER</code>——<code>YD15</code> 拟合直线。</p>
+</li>
+<li>
+<p>数据补全：对 <code>ROUND(A.WS,1)</code>、<code>ROUND(A.POWER,0)</code>、<code>YD15</code> 为空值的情况，依据上述拟合公式，进行数据补全。</p>
+</li>
+<li>
+<p>数据清洗：经过上述流程已经得到了完整数据，对离群值、长时间不动值等异常数据进行清洗，并通过上述两个拟合曲线进行修正。</p>
+</li>
+<li>特殊事项：目标场景往往有特殊情况，如风速过大风机停转保护、功率较低时厂区耗电、风扇转向等。</li>
+</ul>
+<p><a class="glightbox" href="../../images/summarize/1689950709115.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="拟合S型曲线" src="../../images/summarize/1689950709115.png" /></a></p>
+<h3 id="_10">模型设计<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
+<h4 id="_11">模型选择<a class="headerlink" href="#_11" title="Permanent link">#</a></h4>
+<p>采用 PaddleTS 的集成预测器 StackingEnsembleForecaster，主模型为 <a href="https://github.com/PaddlePaddle/PaddleTS/blob/main/paddlets/models/forecasting/dl/lstnet.py">LSTNet 模型</a>，副模型为 <a href="https://github.com/PaddlePaddle/PaddleTS/blob/main/paddlets/models/forecasting/dl/transformer.py">Transformer 模型</a>。</p>
+<h4 id="_12">具体实现<a class="headerlink" href="#_12" title="Permanent link">#</a></h4>
+<p>经过多次参数调整，经典 LSTM 始终没有很好的效果，主要原因是数据随时间变化的规律性较弱，即纵向预测较难，并且提供的数据量较小，难以通过加深网络层数的方式提高准确率。</p>
+<p>考虑通过调整模型的 <code>sampling_stride</code>、<code>in_chunk_len</code>、<code>out_chunk_len</code> 大小，利用同一时期的数据进行横向预测。令移进步长 <code>sampling_stride</code> 为 4，<code>in_chunk_len</code> = <code>out_chunk_len</code> = <code>windowsize</code>。同时对数据的时间和后三列进行移位，增加特征提取部分，进行同一时间段的预测。并将 Dataframe 的后三列和时间列向后移一个 <code>window_size</code> 的长度，同时提取功率的滚动插值和平均值等特征。</p>
 
 
 
@@ -484,6 +763,18 @@
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../javascripts/katex.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

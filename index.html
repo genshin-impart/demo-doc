@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://baidu.com/">
+        <link rel="canonical" href="https://genshin-impart.github.io/demo-doc/">
       
       
       
@@ -43,6 +43,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -562,7 +564,10 @@
 <ul>
 <li>前端</li>
 </ul>
-<p>主要技术栈为 React 框架……</p>
+<p>主要基于 <a href="https://react.dev/">React18</a> 构建，全部使用函数式组件，大量使用自定义 Hook 进行逻辑抽象和封装，包括异步 API 封装、WebSocket 调用、echarts 调用等通用逻辑，基本可以保证函数式组件内部代码是纯视图相关的。语法方面使用 <a href="https://www.typescriptlang.org/">TypeScript</a>，基于 API 文档创建了相关类型说明，尽量避免了使用 <code>any</code> 类型。</p>
+<p>前端子项目构建工具使用现代化的 Vite + SWC 工具链，使用 Rust 和 Go 加快构建速度，使用 Vite 内建的 <code>http_proxy</code> 功能解决垮域反向代理的问题。</p>
+<p>基础组件库为 Joy UI，使用 emotion 作为 CSS-in-JS 解决方案，完全避免书写单独的 CSS 类，并在组件库的基础上进一步抽象出了专用的通用组件，如 <code>FormInput</code> 用于处理表单输入，<code>Collapse</code> 用于可折叠的内容，<code>LoadingScreen</code> 用于异步获取内容等。</p>
+<p>前端子项目整体结构图如下。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
 </code></pre></div>
 <ul>
@@ -572,21 +577,74 @@
 <p>Flask 是一款轻量级的 Python Web 框架，专注于构建简单、灵活且易于扩展的 Web 应用程序。它基于 Werkzeug 工具库和 Jinja2 模板引擎，被广泛应用于快速开发 Web 应用和 API。</p>
 <p>Flask 具有简单的核心，它提供了基本的路由、请求和响应处理功能。开发者可以根据需要选择并添加第三方扩展来增加额外的功能，这使得 Flask 具备高度可定制性。其灵活性使得开发者能够更加自由地组织代码和项目结构。除此之外，Flask 还具有内置集成单元测试、支持安全 cookie（客户端会话）等多种特性。</p>
 <p>Flask 支持 RESTful 风格的 API 开发，可用于构建 REST API。其文档完善且社区活跃，拥有大量的资源和教程，使得学习和使用 Flask 变得相对容易。总体而言，Flask 是一个适用于小型项目或初学者的优秀选择，同时也能满足高级开发人员的需求，能够满足本项目的需求。</p>
-<p>后端整体结构图如下所示。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>
+<details class="后端子项目结构">
+<summary>后端子项目结构</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>model-be
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── backend
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── api
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   │   ├── __init__.py
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   │   ├── model.py
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   │   ├── mythread.py
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   │   ├── process.py
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   │   ├── sio.py
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   │   └── train.py
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   ├── app.py
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   ├── blueprints
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│   │   ├── __init__.py
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│   │   ├── model.py
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│   │   └── user.py
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│   ├── cache
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>│   ├── csv
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>│   ├── extensions.py
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>│   ├── fakes.py
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>│   ├── logs
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>│   │   └── wpf_system.log
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>│   ├── models.py
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>│   ├── settings.py
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>│   ├── sub_entry.py
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>│   └── utils
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>│       ├── auth.py
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>│       ├── core.py
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>│       ├── file.py
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>│       └── model.py
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>├── Makefile
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>├── README.md
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>├── tests
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>│   ├── base.py
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>│   ├── __init__.py
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>│   ├── test_admin.py
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>│   ├── test_auth.py
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>│   ├── test_basic.py
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>│   └── test_cli.py
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>└── TODO.md
 </code></pre></div>
+</details>
 <ul>
 <li>模型</li>
 </ul>
 <p>主要技术栈为 PaddlePaddle 深度学习框架和 Scikit-learn 机器学习工具库。</p>
 <p>PaddlePaddle （飞桨）深度学习框架是百度推出的开源项目，专注于提供高效、易用的深度学习解决方案。它支持动态图和静态图的混合编程模式，既满足灵活性要求，又能实现高性能计算。飞桨的独特之处在于其对于分布式训练和高性能计算的优化，特别适合在大规模数据和模型上进行训练，应用于工业级别的深度学习任务，如图像识别、自然语言处理等。PaddlePaddle 还提供了丰富的预训练模型和模型库，方便开发者快速构建复杂的深度学习模型。本项目采用了基于飞桨深度学习框架的开源时序建模算法库 PaddleTS，实现时序数据处理、分析、建模、预测全流程。</p>
 <p>Scikit-learn 是一个被广泛使用的 Python 机器学习库，为机器学习算法提供了丰富的工具和函数，简化了算法的应用和调整。Scikit-learn 支持多种机器学习算法，包括分类、回归、聚类、降维等，还提供了数据预处理、特征选择和模型评估等功能。该库被广泛应用于数据分析和机器学习领域，适用于从初学者到专业人士的各种应用场景。Scikit-learn 的设计注重易用性和可扩展性，提供了简洁一致的 API 接口，让用户能够迅速上手，并能根据需要轻松扩展功能。这使得 Scikit-learn 成为了 Python 生态系统中不可或缺的机器学习工具之一。</p>
-<p>模型整体结构图如下所示。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>
+<details class="模型子项目结构">
+<summary>模型子项目结构</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>model-core
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── LICENSE
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── Makefile
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>├── modules
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   ├── ensemble_model.py
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│   └── single_model.py
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>├── paddle_train.py
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>├── predict.py
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>├── README.md
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>└── utils
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    ├── feature_engineer.py
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    ├── my_configs.py
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    └── preprocess.py
 </code></pre></div>
+</details>
 <h3 id="_6">项目结构<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>
-</code></pre></div>
+<p>项目使用前后端分离的 C/S 模式。前端采用单页面应用（SPA）和客户端渲染（CSR）的方式；后端基于 Flask 构建，符合 RESTful API 规范。</p>
+<p>将前端、后端、模型三个子项目组合起来即为本项目的最终架构。</p>
 
 
 
@@ -632,6 +690,18 @@
     
     
       <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="javascripts/katex.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
