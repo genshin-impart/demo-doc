@@ -39,11 +39,48 @@ Flask 具有简单的核心，它提供了基本的路由、请求和响应处�
 
 Flask 支持 RESTful 风格的 API 开发，可用于构建 REST API。其文档完善且社区活跃，拥有大量的资源和教程，使得学习和使用 Flask 变得相对容易。总体而言，Flask 是一个适用于小型项目或初学者的优秀选择，同时也能满足高级开发人员的需求，能够满足本项目的需求。
 
-后端整体结构图如下所示。
+??? 后端子项目结构
 
-```
-
-```
+    ```
+    model-be
+    ├── backend
+    │   ├── api
+    │   │   ├── __init__.py
+    │   │   ├── model.py
+    │   │   ├── mythread.py
+    │   │   ├── process.py
+    │   │   ├── sio.py
+    │   │   └── train.py
+    │   ├── app.py
+    │   ├── blueprints
+    │   │   ├── __init__.py
+    │   │   ├── model.py
+    │   │   └── user.py
+    │   ├── cache
+    │   ├── csv
+    │   ├── extensions.py
+    │   ├── fakes.py
+    │   ├── logs
+    │   │   └── wpf_system.log
+    │   ├── models.py
+    │   ├── settings.py
+    │   ├── sub_entry.py
+    │   └── utils
+    │       ├── auth.py
+    │       ├── core.py
+    │       ├── file.py
+    │       └── model.py
+    ├── Makefile
+    ├── README.md
+    ├── tests
+    │   ├── base.py
+    │   ├── __init__.py
+    │   ├── test_admin.py
+    │   ├── test_auth.py
+    │   ├── test_basic.py
+    │   └── test_cli.py
+    └── TODO.md
+    ```
 
 #### 模型
 
@@ -53,14 +90,26 @@ PaddlePaddle （飞桨）深度学习框架是百度推出的开源项目，专�
 
 Scikit-learn 是一个被广泛使用的 Python 机器学习库，为机器学习算法提供了丰富的工具和函数，简化了算法的应用和调整。Scikit-learn 支持多种机器学习算法，包括分类、回归、聚类、降维等，还提供了数据预处理、特征选择和模型评估等功能。该库被广泛应用于数据分析和机器学习领域，适用于从初学者到专业人士的各种应用场景。Scikit-learn 的设计注重易用性和可扩展性，提供了简洁一致的 API 接口，让用户能够迅速上手，并能根据需要轻松扩展功能。这使得 Scikit-learn 成为了 Python 生态系统中不可或缺的机器学习工具之一。
 
-模型整体结构图如下所示。
+??? 模型子项目结构
 
-```
-
-```
+    ```
+    model-core
+    ├── LICENSE
+    ├── Makefile
+    ├── modules
+    │   ├── ensemble_model.py
+    │   └── single_model.py
+    ├── paddle_train.py
+    ├── predict.py
+    ├── README.md
+    └── utils
+        ├── feature_engineer.py
+        ├── my_configs.py
+        └── preprocess.py
+    ```
 
 ### 项目结构
 
-```
+项目使用前后端分离的 C/S 模式。前端采用单页面应用（SPA）和客户端渲染（CSR）的方式；后端基于 Flask 构建，符合 RESTful API 规范。
 
-```
+将前端、后端、模型三个子项目组合起来即为本项目的最终架构。

@@ -1,6 +1,6 @@
 site_name: 模型可视化平台使用指南
 site_description: 三天摸鱼两天晒网的区域赛作品文档
-site_url: https://baidu.com/
+site_url: https://genshin-impart.github.io/demo-doc/
 repo_url: https://github.com/genshin-impart/
 copyright: Copyright © 2023 三天摸鱼两天晒网 HUST
 nav:
@@ -55,3 +55,11 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+# Latex 支持
+extra_javascript:
+  - javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
