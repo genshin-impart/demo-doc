@@ -20,11 +20,8 @@
 
 平台允许设置的参数包括：
 
-- `in_chunk_len`: 输入窗口大小
-- `out_chunk_len`: 输出窗口大小
-- `batch_size`:
-- `epoch`:
-- `learning_rate`:
+- 模型名称: 新模型的名称
+- 训练轮次: 
 
 (添加示意图说明这些参数的含义)
 
